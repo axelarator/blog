@@ -4,11 +4,7 @@ Static Astro site for [blog.axelarator.net](https://blog.axelarator.net), migrat
 
 ## Requirements
 
-Node 22+ (installed via Homebrew as `node@22`, keg-only):
-
-```sh
-export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
-```
+Node 22+ (installed via Homebrew: `brew install node@22 && brew link --force node@22`).
 
 ## Commands
 
