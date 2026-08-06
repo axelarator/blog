@@ -1,0 +1,3 @@
+# Ghost's RSS feed lived at /rss/ — keep old subscribers working
+/rss/ /rss.xml 301
+/rss /rss.xml 301
