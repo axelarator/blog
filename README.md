@@ -38,8 +38,6 @@ Static pages (like About) live in `src/content/pages/` and also render at `/<slu
 Build settings:
 
 - **Build command:** `npm run build`
-- **Build output directory:** `dist`
-- **Environment variable:** `NODE_VERSION=22`
 
 Then add `blog.axelarator.net` as a custom domain on the Pages project — since the domain is already on Cloudflare, it updates the DNS record automatically.
 
