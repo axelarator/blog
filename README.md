@@ -33,15 +33,18 @@ Images go in `public/images/` and are referenced as `/images/...`.
 
 Static pages (like About) live in `src/content/pages/` and also render at `/<slug>/`.
 
-## Deploying to Cloudflare Pages
+## Deploying to Cloudflare
 
-Build settings:
+Cloudflare's repo-import flow creates a **Worker** with static assets:
 
 - **Build command:** `npm run build`
-- **Build output directory:** `dist`
-- **Environment variable:** `NODE_VERSION=22`
+- **Deploy command:** `npx wrangler deploy` (the default — uses `wrangler.jsonc`, which serves `dist/` and wires up the 404 page)
 
-Then add `blog.axelarator.net` as a custom domain on the Pages project — since the domain is already on Cloudflare, it updates the DNS record automatically.
+`.node-version` pins the build image to Node 22.
+
+Alternatively, the classic **Pages** flow works too: build command `npm run build`, output directory `dist`, no deploy command.
+
+Either way, add `blog.axelarator.net` as a custom domain on the project — since the domain is already on Cloudflare, it updates the DNS record automatically.
 
 `public/_redirects` keeps Ghost's old `/rss/` feed URL redirecting to `/rss.xml`.
 
